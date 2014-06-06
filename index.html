@@ -1,0 +1,483 @@
+<!DOCTYPE HTML>
+<!--
+	Astral 2.5 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	wanda
+	-->
+<html>
+	<head>
+		<title>Wanda</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery1.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/portofolio.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+			<link rel="stylesheet" href="css/noscript.css" />
+		</noscript>
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+		
+		<link href="css/portofolio.css" rel="stylesheet" type="text/css" media="all" />
+		
+		<link rel="stylesheet" type="text/css" href="css/imgeffect.css" />   <!-- kalo diilangin gambarnya malah gag nampak,cuma nampak keterangann belakangnya-->
+<script src="js/jquery1.min.js"></script><!-- buat menampakkan bulatan2-->
+<!-- start gallery Script -->
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>	
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+				<script type="text/javascript">
+				$(function () {
+					
+					var filterList = {
+					
+						init: function () {
+						
+							// MixItUp plugin
+							// http://mixitup.io
+							$('#portfoliolist').mixitup({
+								targetSelector: '.portfolio',
+								filterSelector: '.filter',
+								effects: ['fade'],
+								easing: 'snap',
+								// call the hover effect
+								onMixEnd: filterList.hoverEffect()
+							});				
+						
+						},
+						
+						hoverEffect: function () {
+						
+							// Simple parallax effect
+							$('#portfoliolist .portfolio').hover(
+								function () {
+									$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+									$(this).find('img').stop().animate({top: 0}, 500, 'easeOutQuad');				
+								},
+								function () {
+									$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeInQuad');
+									$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+								}		
+							);				
+						
+						}
+			
+					};
+					
+					// Run the show!
+					filterList.init();
+					
+					
+				});	
+				</script>
+				<!-- Add fancyBox main JS and CSS files -->
+				<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+				<link href="css/magnific-popup.css" rel="stylesheet" type="text/css">
+						<script>
+							$(document).ready(function() {
+								$('.popup-with-zoom-anim').magnificPopup({
+									type: 'inline',
+									fixedContentPos: false,
+									fixedBgPos: true,
+									overflowY: 'auto',
+									closeBtnInside: true,
+									preloader: false,
+									midClick: true,
+									removalDelay: 300,
+									mainClass: 'my-mfp-zoom-in'
+							});
+						});
+						</script>
+				<script type="text/javascript" src="js/move-top.js"></script>
+				<script type="text/javascript" src="js/easing.js"></script>
+				<!----end gallery----------->
+				
+		   	<script type="text/javascript">
+				jQuery(document).ready(function($) {
+					$(".scroll").click(function(event){		
+						event.preventDefault();
+						$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+					});
+				});
+			</script>
+
+		
+		
+		
+		
+		
+		
+		
+	</head>
+	<body class="homepage">
+
+		<!-- Wrapper-->
+			<div id="wrapper">
+				
+				<!-- Nav -->
+					<nav id="nav">
+					<!--icon di dalam fa fa-home-->
+						<a href="#me" class="fa fa-home active"><span>Home</span></a>
+						<a href="#profil" class="fa fa-coffee"><span>Profil</span></a><!--seperti bulet2 dalam tampilan web-->
+						<a href="#team" class="fa fa-group"><span>Our Team</span></a>
+						<a href="#work" class="fa fa-folder"><span>Work</span></a><!--seperti bulet2 dalam tampilan web-->
+						<a href="#email" class="fa fa-envelope"><span>Email Me</span></a>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						
+						<!-- Me -->
+							<article id="me" class="panel">
+								<header>
+									<h1>CV NETNIHO</h1>
+									<span class="byline">Turn Your Concept Into Reality</span><br/><br/><br/><br/>
+								<!--	<img src="images/logo.png" alt="" />--><!--edit gambar by kumala-->
+								</header>
+								<a href="#work" class="jumplink pic">
+									<span class="arrow fa fa-chevron-right"><span>See my work</span></span>
+									<img src="images/me.jpg" alt="" />
+								</a>
+							</article>
+						<!--Profil-->
+							<article id="profil" class="panel" >
+							<background="lightblue">
+								<header>
+								<h1>Profil</h1>
+									<span class="byline">Kami adalah software house berdedikasi untuk merealisasikan apa yang anda bayangkan dan apa yang anda butuhkan tentang teknologi. 
+									Moto kami adalah customer oriented. 
+									Baik dalam custom pembangunan sistem, waktu pembangunan sistem maupun biaya dalam pembangunan sistem. Ciri khas dari NETNIHO :
+									<ul>
+									<li>Berkomitmen</li>
+									<li>Solutif & Kreatif</li>
+									<li>Layanan after sales istimewa</li>									</ul></span>
+								<!--	<img src="images/logo.png" alt="" />--><!--edit gambar by kumala-->
+								</header>
+							</article>
+						<!--Our Team-->
+							<article id="team" class="panel">
+								<header>
+					<!--				<h1>Our Team</h1>-->
+									<span class="byline">Kami menyebut tim NETNIHO sebagai keluarga. Dan begitulah cara kami bekerja. 
+									NETNIHO mempunyai tim yang terdiri dari berbagai individu dengan latar belakang dan minat yang kuat pada bidangnya.<br/>
+									Anda akan menemui banyak orang yang berpengalaman dalam dunia IT.
+									Tetapi hanya di NETNIHO Anda akan mendapatkan orang-orang expert dan mensupport sepenuhnya bisnis Anda.Karena dari awal kami bertumbuh sebagai keluarga. 
+									Dan seperti keluarga lah kami melayani Anda.</span>
+								<!--	<img src="images/logo.png" alt="" />--><!--edit gambar by kumala-->
+								</header>
+							</article>
+		
+
+
+
+		
+						<!-- Work --> 
+							<article id="work" class= "panel" > <!--height= 80px width= 90px ini ternyata gag pengaruh-->							
+						
+						<!--start portfolio------>
+	<div class="wrap"><!-- id="portfolio"-->
+		<!--div class="main">
+					<!-- start gallery  -->
+			<div class="gallery1">
+
+					<!--1-->
+					<!--start-mfp App dev -->	
+						<div id="small-dialog1" class="mfp-hide">
+							<div class="pop_up">
+								<h2>Application Development</h2>
+								<img src="images/icon2.png" alt=""/>
+								<p>Application Development</p>
+							</div>
+						</div>
+					<!--end-mfp app dev -->
+					
+					<!--2-->
+					<!--start-mfp mobile app dev-->	
+						<div id="small-dialog2" class="mfp-hide">
+							<div class="pop_up">
+								<h2>Mobile Application Development</h2>
+								<img src="images/icon3.png" alt=""/>
+								<p>Mobile Application Development</p>
+							</div>
+						</div>
+					<!--end-mfp mobile app dev-->
+
+					<!--3-->
+					<!--start-mfp web dev-->	
+						<div id="small-dialog3" class="mfp-hide">
+							<div class="pop_up">
+								<h2>Web Development</h2>
+								<img src="images/icon3.png" alt=""/>
+								<p>Web Development</p>
+							</div>
+						</div>
+					<!--end-mfp web dev-->
+					
+					
+					<!--4-->
+					<!--start-mfp networking-->	
+						<div id="small-dialog4" class="mfp-hide">
+							<div class="pop_up">
+								<h2>Networking</h2>
+								<img src="images/icon5.png" alt=""/>
+								<p>Networking</p>
+							</div>
+						</div>
+					<!--end-mfp networking-->
+					
+					
+					<!--5-->
+					<!--start-mfp IT consultant-->	
+						<div id="small-dialog5" class="mfp-hide">
+							<div class="pop_up">
+								<h2>IT consultant</h2>
+								<img src="images/icon6.png" alt=""/>
+								<p>IT consultant</p>
+							</div>
+						</div>
+					<!--end-mfp IT consultant-->
+					
+					
+					<!--6-->
+					<!--start-mfp IT Education-->	
+						<div id="small-dialog6" class="mfp-hide">
+							<div class="pop_up">
+								<h2>IT Education</h2>
+								<img src="images/icon6.png" alt=""/>
+								<p>IT Education</p>
+							</div>
+						</div>
+					<!--end-mfp IT consultant-->
+					
+			<!---start-content----->
+			<div class="gallery">
+					<div class="clear"> </div>
+					<div class="container">
+						<h2>LAYANAN</h2>
+						<p><center>Layanan yang kami berikan?<center></p>
+					<ul id="filters"><!-- class="clearfix"-->
+						<li><span class="filter active" data-filter="app card icon logo web">All</span></li>
+					<li><span class="filter" data-filter="logo icon web card">Graphic Design</span></li>
+						<li><span class="filter" data-filter="app web">Web Design</span></li> 						
+						<!-- <li><span class="filter" data-filter="icon web card">Flat Design</span></li> -->
+					</ul>
+			<div id="portfoliolist">
+			
+			 <div class="portfolio logo" data-cat="logo">
+				<div class="portfolio-wrapper">				
+					<a href="#small-dialog1"><!--class="popup-with-zoom-anim" -->
+						<ul class="ch-grid">
+							<li>
+								<div class="ch-item ch-img-1">
+									<div class="ch-info">
+										<img src="images/zoom-white.png"/>
+										<h3>#</h3>
+										<p><a href="#">#</a></p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</a>
+				</div>
+			</div>	
+		
+			<div class="portfolio app" data-cat="app">
+				<div class="portfolio-wrapper">			
+					<a class="popup-with-zoom-anim" href="#small-dialog1">
+						<ul class="ch-grid">
+							<li>
+								<div class="ch-item ch-img-2">
+									<div class="ch-info">
+										<img src="images/zoom-white.png"/>
+										<h3>Application Development</h3>
+										<p><a href="#">Application Development</a></p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</a>
+				</div>
+			</div>	
+			
+			
+			<div class="hide">	
+			<div class="portfolio web" data-cat="web">
+				<div class="portfolio-wrapper">						
+					<a class="popup-with-zoom-anim" href="#small-dialog2">
+						<ul class="ch-grid">
+							<li>
+								<div class="ch-item ch-img-3">
+									<div class="ch-info">
+										<img src="images/zoom-white.png"/>
+										<h3>Mobile Application Development</h3>
+										<p><a href="#">Mobile Application Development</a></p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</a>
+				</div>
+			</div>	
+			</div>
+		
+			<div class="portfolio card" data-cat="card">
+				<div class="portfolio-wrapper">			
+					<a class="popup-with-zoom-anim" href="#small-dialog3">
+						<ul class="ch-grid">
+							<li>
+								<div class="ch-item ch-img-4">
+									<div class="ch-info">
+										<img src="images/zoom-white.png"/>
+										<h3>Web Development</h3>
+										<p><a href="#">Web Development</a></p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</a>
+				</div>
+			</div>	
+				
+			<div class="hide">	
+			<div class="portfolio app" data-cat="app">
+				<div class="portfolio-wrapper">
+					<a class="popup-with-zoom-anim" href="#small-dialog4">
+						<ul class="ch-grid">
+							<li>
+								<div class="ch-item ch-img-5">
+									<div class="ch-info">
+										<img src="images/zoom-white.png"/>
+										<h3>Networking</h3>
+										<p><a href="#">Networking</a></p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</a>
+				</div>
+			</div>	
+			</div>	
+			
+			<div class="hide">
+			<div class="portfolio card" data-cat="card">
+				<div class="portfolio-wrapper">			
+					<a class="popup-with-zoom-anim" href="#small-dialog4">
+						<ul class="ch-grid">
+							<li>
+								<div class="ch-item ch-img-6">
+									<div class="ch-info">
+										<img src="images/zoom-white.png"/>
+										<h3>Networking</h3>
+										<p><a href="#">Networking</a></p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</a>
+				</div>
+			</div>	
+			</div>
+			<div>
+			
+			<div class="portfolio card" data-cat="card">
+				<div class="portfolio-wrapper">			
+					<a class="popup-with-zoom-anim" href="#small-dialog5">
+						<ul class="ch-grid">
+							<li>
+								<div class="ch-item ch-img-7">
+									<div class="ch-info">
+										<img src="images/zoom-white.png"/>
+										<h3>IT consultant</h3>
+										<p><a href="#">IT cosultant</a></p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</a>
+				</div>
+			</div>	
+			</div>
+			<div>
+	
+	<div class="portfolio logo" data-cat="logo" id="hide">
+				<div class="portfolio-wrapper">			
+					<a class="popup-with-zoom-anim" href="#small-dialog6">
+						<ul class="ch-grid">
+							<li>
+								<div class="ch-item ch-img-8">
+									<div class="ch-info">
+										<img src="images/zoom-white.png"/>
+										<h3>IT Education</h3>
+										<p><a href="#">IT Education</a></p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</a>
+				</div>
+			</div>																																							
+		</div>
+		</div>
+	</div>
+	
+							
+							</section>
+							</article>
+
+
+							
+						<!-- Email -->
+							<article id="email" class="panel">
+								<header>
+									<h2>Email Me</h2>
+								</header>
+								<form action="#" method="post">
+									<div>
+										<div class="row half">
+											<div class="6u">
+												<input type="text" class="text" name="name" placeholder="Name" />
+											</div>
+											<div class="6u">
+												<input type="text" class="text" name="email" placeholder="Email" />
+											</div>
+										</div>
+										<div class="row half">
+											<div class="12u">
+												<input type="text" class="text" name="subject" placeholder="Subject" />
+											</div>
+										</div>
+										<div class="row half">
+											<div class="12u">
+												<textarea name="message" placeholder="Message"></textarea>
+											</div>
+										</div>
+										<div class="row">
+											<div class="12u">
+												<input type="submit" class="button" value="Send Message" />
+											</div>
+										</div>
+									</div>
+								</form>
+							</article>
+
+					</div>
+		
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="links">
+							<li>&copy; Jane Doe</li>
+							<li>Images : <a href="http://fotogrph.com/">fotogrph</a></li>
+							<li>Design : <a href="http://html5up.net/">HTML5 UP</a></li>
+						</ul>
+					</div>
+		
+			</div>
+
+	</body>
+</html>
